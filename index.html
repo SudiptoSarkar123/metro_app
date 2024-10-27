@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where is my metro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+        <header>
+            <h1>WhereIs MyMetro</h1>
+        </header>
+
+            <!-- Search Section -->
+         <section class="search-section">
+            <h2>Find your metro Schedule</h2>
+            <form action="">
+                <label for="from-station">Select Station:</label>
+                <input type="text" id="from-station" placeholder="From Station">
+
+                <label for="to-station">Select Station:</label>
+                <input type="text" id="to-station" placeholder="Enter the Destinaiton Station">
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date">
+
+                <label for="time">Select Time:</label>
+                <input type="time" id="time">
+
+                <button type="submit">Search</button>
+            </form>
+         </section>
+
+         <!-- Timetable Section -->
+
+         <section class="timetable-section">
+            <h2>Metro Timetable</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Station</th>
+                        <th>Departure Time</th>
+                        <th>Destinaiton</th>
+                        <th>Next Metro</th>
+                    </tr>
+                </thead>
+
+                <tbody  id="timetable-body">
+                    <!-- Exemple Row -->
+                     <tr>
+                        <td>Station name</td>
+                        <td>08:00</td>
+                        <td>08:15</td>
+                        <td>08:30</td>
+                     </tr>
+                     <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+         </section>
+
+         <!-- Footer -->
+          <footer>
+            <p>Metro Timetable &copy; 2024</p>
+          </footer>
+          <script src="script.js"></script>
+</body>
+</html>

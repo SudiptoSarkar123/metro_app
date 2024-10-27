@@ -1,0 +1,21 @@
+[
+    {
+        "station": "Central",
+        "departureTime": "08:00 AM",
+        "reachedToDestination": "08:15 AM",
+        "nextMetro": "08:30 AM"
+    },
+    {
+        "station": "Park Street",
+        "departureTime": "08:05 AM",
+        "reachedToDestination": "08:20 AM",
+        "nextMetro": "08:35 AM"
+    },
+    {
+        "station": "Sealdah",
+        "departureTime": "08:10 AM",
+        "reachedToDestination": "08:25 AM",
+        "nextMetro": "08:40 AM"
+    }
+    
+]
