@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where is my metro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- header -->
-        <header>
-            <h1>WhereIs MyMetro</h1>
-        </header>
+    <header>
+        <h1>WhereIs MyMetro</h1>
+    </header>
 
-            <!-- Search Section -->
-         <section class="search-section">
-            <h2>Find your metro Schedule</h2>
-            <form action="">
-                <label for="from-station">Select Station:</label>
-                <input type="text" id="from-station" placeholder="From Station">
+    <!-- Search Section -->
+    <section class="search-section">
+        <h2>Find your metro Schedule</h2>
+        <form id="search-form">
+            <label for="from-station">Select Station:
+                <select name="from-station" id="from-station" required>
+                    <option value="#">___Select Station___</option>
+                    <option value="sealdah">Sealdah</option>
+                    <option value="phoolbagan">Phoolbagan</option>
+                    <option value="saltlakestadium">Salt Lake Stadium</option>
+                    <option value="bengalchemical">Bengal Chemical</option>
+                    <option value="citycentre">City Centre</option>
+                    <option value="centralpark">Central Park</option>
+                    <option value="karunamoyee">Karunamoyee</option>
+                    <option value="saltlakesectorv">Salt Lake Sector V</option>
+                </select>
+            </label>
 
-                <label for="to-station">Select Station:</label>
-                <input type="text" id="to-station" placeholder="Enter the Destinaiton Station">
 
-                <label for="date">Select Date:</label>
-                <input type="date" id="date">
+            <label for="direction">Direction To:
+                <select name="direction" id="direction" required>
+                    <option value="#">___Select Direction___</option>
+                    <option value="toSealdah">To Sealdah</option>
+                    <option value="toSectorv">To Sector V</option>
+                </select>
+            </label>
 
-                <label for="time">Select Time:</label>
-                <input type="time" id="time">
+            <button type="submit" id="submit">Search</button>
+        </form>
+    </section>
 
-                <button type="submit">Search</button>
-            </form>
-         </section>
+    <!-- Timetable Section -->
 
-         <!-- Timetable Section -->
+    <section class="timetable-section">
+        <h2>Metro Timetable</h2>
 
-         <section class="timetable-section">
-            <h2>Metro Timetable</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Station</th>
-                        <th>Departure Time</th>
-                        <th>Destinaiton</th>
-                        <th>Next Metro</th>
-                    </tr>
-                </thead>
+    </section>
 
-                <tbody  id="timetable-body">
-                    <!-- Exemple Row -->
-                     <tr>
-                        <td>Station name</td>
-                        <td>08:00</td>
-                        <td>08:15</td>
-                        <td>08:30</td>
-                     </tr>
-                     <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-         </section>
-
-         <!-- Footer -->
-          <footer>
-            <p>Metro Timetable &copy; 2024</p>
-          </footer>
-          <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>Metro Timetable &copy; 2024</p>
+    </footer>
+    <script src="data.js"></script>
 </body>
+
 </html>
