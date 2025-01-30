@@ -188,9 +188,14 @@ function findTforSectorV(currentStation) {
 
 
 function displayTiming(nextTimes){
-
+    
+    
     const parent = document.createElement('div')
     parent.classList.add('parent');
+    
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Next Train Timings';
+
     const min = document.createElement('div');
     min.id = 'min';
     const minbtn = document.createElement('div');
@@ -198,23 +203,23 @@ function displayTiming(nextTimes){
     minbtn.textContent = 'x';
     min.appendChild(minbtn);
     parent.appendChild(min);
-    for (let i = 0; i < nextTimes.length; i++) {
+    for (let j = 0; j < nextTimes.length; j++) {
         const p = document.createElement('p');
+        p.classList.add('child');
         const i = document.createElement('i');
         i.classList.add('fa-solid','fa-train');
         p.appendChild(i);
         const span = document.createElement('span');
-        span.textContent = `Your next train is at ${nextTimes[i]}`;
+        span.classList.add('child-span');
+        span.innerHTML = `Your next train is at ${nextTimes[j]}`;
         p.appendChild(span);
         parent.appendChild(p);
     }
     document.body.appendChild(parent);
+    minbtn.addEventListener('click', () => {
+        parent.remove();
+    })
 }
 
 
 
-const minbtn = document.getElementById('minbtn');
-minbtn.addEventListener('click', () => {
-    const parent = document.querySelector('.parent');
-    parent.remove();
-})

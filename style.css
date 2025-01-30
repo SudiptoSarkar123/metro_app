@@ -97,19 +97,20 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 300px;
     padding: 20px 10px;
     color: white;
     border-radius: 10px;
 }
-p{
+.child{
     padding-left: 10px;
     padding-bottom: 5px;
+    margin-bottom: 5px;
     border-bottom: 1px dotted white;
 }
-span{
-    padding-right: 20px;
+.child-span{
+    padding-left: 20px;
 }
 i{
     color: rgb(255, 60, 76);
