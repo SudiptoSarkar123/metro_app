@@ -12,6 +12,16 @@ body{
     min-height: 100vh;
 
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+  }
 
 header{
     background-color: #2b3e50;
@@ -76,4 +86,43 @@ footer{
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+
+/* ++++++++++++++++++++++ Timing CSS ++++++++++++++++++++++ */
+
+.parent{
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    padding: 20px 10px;
+    color: white;
+    border-radius: 10px;
+}
+p{
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted white;
+}
+span{
+    padding-right: 20px;
+}
+i{
+    color: rgb(255, 60, 76);
+}
+#min{
+    display: flex;
+    justify-content: flex-end;
+}
+#minbtn{
+    cursor: pointer;
+    background-color: rgb(255, 60, 76);
+    text-align: center;
+    padding: 2px 7px;
+    border-radius: 50%;
+
 }

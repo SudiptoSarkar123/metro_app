@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: rgb(154, 138, 138);
+        }
+        
+        .parent{
+            /* display: none; */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 300px;
+            padding: 20px 10px;
+            color: white;
+            border-radius: 10px;
+        }
+        p{
+            padding-left: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dotted white;
+        }
+        span{
+            padding-right: 20px;
+        }
+        i{
+            color: rgb(255, 60, 76);
+        }
+        #min{
+            display: flex;
+            justify-content: flex-end;
+        }
+        #minbtn{
+            cursor: pointer;
+            background-color: rgb(255, 60, 76);
+            text-align: center;
+            padding: 2px 7px;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="parent">
+            <div id="min"><div id="minbtn">x</div></div>
+
+            <p class="ch1"><span><i class="fa-solid fa-train"></i></span>Your next train is at 7:00</p>
+            <p class="ch2"><span><i class="fa-solid fa-train"></i></span>Your next train is at 7:00</p>
+            <p class="ch3"><span><i class="fa-solid fa-train"></i></span>Your next train is at 7:00</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

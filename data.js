@@ -145,13 +145,76 @@ function findTforSealdah(currentStation) {
             console.log('Matching station found:', currentStation);
 
             const times = Object.values(toSealdah[i].times); // Extract times as an array
+            const nextTimes = []
+            for (let j = 0; j < times.length; j++) {
+                if (times[j] >= currentTime) {
+                    console.log('Next available time:', times[j]); 
+                    nextTimes.push(times[j])
+                    if (nextTimes.length === 3) {
+                        
+                        break; // Stop at the first available time
+                    }
+                }
+            }
+            displayTiming(nextTimes)
+        }
+    }
+}
+function findTforSectorV(currentStation) {
+    for (let i = 0; i < toSectorV.length; i++) {
+        if (toSectorV[i].from === currentStation) {
+            console.log('Matching station found:', currentStation);
+
+
+            const times = Object.values(toSectorV[i].times); // Extract times as an array
+
+            const nextTimes = []
             
             for (let j = 0; j < times.length; j++) {
                 if (times[j] >= currentTime) {
                     console.log('Next available time:', times[j]); 
-                    break; // Stop at the first available time
+
+                    nextTimes.push(`${times[j]}`); // Convert to string and push to nextTimes array (times[j])
+                    if (nextTimes.length === 3) {
+                        break; // Stop at the first available time
+                    }
                 }
             }
+            console.log(nextTimes);
+        displayTiming(nextTimes);
         }
     }
 }
+
+
+function displayTiming(nextTimes){
+
+    const parent = document.createElement('div')
+    parent.classList.add('parent');
+    const min = document.createElement('div');
+    min.id = 'min';
+    const minbtn = document.createElement('div');
+    minbtn.id = 'minbtn';
+    minbtn.textContent = 'x';
+    min.appendChild(minbtn);
+    parent.appendChild(min);
+    for (let i = 0; i < nextTimes.length; i++) {
+        const p = document.createElement('p');
+        const i = document.createElement('i');
+        i.classList.add('fa-solid','fa-train');
+        p.appendChild(i);
+        const span = document.createElement('span');
+        span.textContent = `Your next train is at ${nextTimes[i]}`;
+        p.appendChild(span);
+        parent.appendChild(p);
+    }
+    document.body.appendChild(parent);
+}
+
+
+
+const minbtn = document.getElementById('minbtn');
+minbtn.addEventListener('click', () => {
+    const parent = document.querySelector('.parent');
+    parent.remove();
+})
